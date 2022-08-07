@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.challenge.diego.precios.entities.DTO.PreciosFilterDTO;
 import com.challenge.diego.precios.entities.DTO.ResponseChallengeDTO;
-import com.challenge.diego.precios.entities.business.Precio;
 import com.challenge.diego.precios.mappers.DTO.PrecioDTOMapper;
 import com.challenge.diego.precios.service.PrecioService;
 
@@ -36,8 +35,7 @@ public class PreciosController {
 	@PostMapping(path = "/findByFilter")
 	@ResponseStatus(HttpStatus.OK)
 	public List<ResponseChallengeDTO> findByFilter(@RequestBody PreciosFilterDTO filter) {
-		List<Precio> response = service.findByFilter(mapper.filterMap(filter));
-		return mapper.mapListChallenge(response);
+		return mapper.mapListChallenge(service.findByFilter(mapper.filterMap(filter)));
 	}
 
 }
