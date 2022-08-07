@@ -3,7 +3,6 @@ package com.challenge.diego.precios.entities.business;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor

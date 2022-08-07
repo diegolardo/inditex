@@ -2,7 +2,6 @@ package com.challenge.diego.precios.entities.DTO;
 
 import java.io.Serializable;
 
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
