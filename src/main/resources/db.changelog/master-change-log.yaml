@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Diego
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: false
+            comment: Generating Initial Structure
+            dbms: "h2"
+            endDelimiter: ;
+            splitStatemets: true
+            path: classpath:/db.changelog/InitModel.sql
+  - changeSet:
+      id: 2
+      author: Diego
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: false
+            comment: Generating Initial Data
+            dbms: "h2"
+            endDelimiter: ;
+            splitStatemets: true
+            path: classpath:/db.changelog/InitData.sql
